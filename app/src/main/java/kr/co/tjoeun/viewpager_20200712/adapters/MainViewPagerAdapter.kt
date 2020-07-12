@@ -8,6 +8,14 @@ import kr.co.tjoeun.fragment_20200712.fragments.SecondFragment
 
 class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
+    override fun getPageTitle(position: Int): CharSequence? {
+        if (position == 0) {
+            return "첫째 페이지"
+        }
+        else {
+            return "둘째 페이지"
+        }
+    }
     override fun getItem(position: Int): Fragment {
         if (position == 0) {
             return FirstFragment()
